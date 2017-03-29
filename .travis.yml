@@ -1,0 +1,14 @@
+language: objective-c
+osx-image: xcode8
+sudo: false
+
+#before_install:
+#  - gem install bundler
+
+install:
+  - pod install
+
+#before_script
+
+script:
+  - xcodebuild
