@@ -1,14 +1,6 @@
 language: objective-c
-osx-image: xcode8
+osx-image: xcode8.2
 sudo: false
 
-#before_install:
-#  - gem install bundler
-
-install:
-  - pod install
-
-#before_script
-
 script:
-  - xcodebuild
+  - xcodebuild clean build test -project NewlyDevelopedManualLayout.xcodeproj -scheme NewlyDevelopedManualLayout -destination "platform=iOS Simulator,name=iPhone 7,OS=10.2"
