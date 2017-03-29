@@ -2,5 +2,11 @@ language: objective-c
 osx-image: xcode8.2
 sudo: false
 
+before_install:
+  - gem install fastlane
+
+before_script:
+  - fastlane snapshot rest_simulators —-force
+
 script:
   - xcodebuild clean build test -project NewlyDevelopedManualLayout.xcodeproj -scheme NewlyDevelopedManualLayout -destination "platform=iOS Simulator,name=iPhone 7,OS=10.2"
